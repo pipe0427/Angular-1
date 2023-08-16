@@ -1,30 +1,92 @@
-<h3 class ="text-center">{{title}}</h3>
-<br/>
-<input type="text" calss = "form-control" [(ngModel)]="name" name="name" id="name">
-<br/>
-<br/>
-<input type="text" calss = "form-control" [(ngModel)]="surname" id="surname" name="surname" >
-<br/>
-<br/>
-<select name="select" id="select" [(ngModel)] = "select">
-    <option value="Masculino">{{masculino}}</option>
-    <option value="Femenino">{{femenino}}</option>
-</select>
-<br/>
-<br/>
-<input type="eamail" calss = "form-control" [(ngModel)]="email" id="email" name="email" >
-<br/>
-<br/>
-<input type="text" calss = "form-control" [(ngModel)]="bond" name = "bond" id ="bond" >
-<br/>
-<br/>
-<button class = "btn btn-primary" (click)="guardarDatos()">Mostrar nombre</button>
-<br/>
-<br/>
-<p>{{name_nuevo}}</p>
-<p>{{surname_nuevo}}</p>
-<p>{{select_nuevo}}</p>
-<p>{{email_nuevo}}</p>
-<p>{{bond_nuevo}}</p>
+<div class="container">
+    
+    <div class = "row">
+        <div class="col-md-4">
+            <img [src]="url" alt="" width="150" height="75">
+        </div>
+        <div class="col-md-4 ">
+            <h3 class ="text-center" >{{title}}</h3>
+        </div>
+    </div>
+    <br/>
+    <div class="row row align-items-start">
+        <div class="col">
+            <h6>{{nombre}}</h6>
+            <input type="text" calss = "form-control" [(ngModel)]="name" name="name" id="name">
+            <br/>
+            <br/>
+            <h6>{{apellido}}</h6>
+            <input type="text" calss = "form-control" [(ngModel)]="surname" id="surname"  >
+            <br/>
+            <br/>
+            <h6>{{genero}}</h6>
+            <select name="select" id="select" [(ngModel)] = "select">
+                <option value="Masculino">{{masculino}}</option>
+                <option value="Femenino">{{femenino}}</option>
+            </select>
+            <br/>
+            <br/>
+            <h6>{{correo}}</h6>
+            <input type="eamail" calss = "form-control" [(ngModel)]="email" id="email" name="email" >
+            <br/>
+            <br/>
+            <h6>{{cedula}}</h6>
+            <input type="text" calss = "form-control" [(ngModel)]="bond" name = "bond" id ="bond" >
+            <br/>
+            <br/>
+            <button class = "btn btn-primary" (click)="guardarDatos()">Mostrar nombre</button>
+            <br/>
+            <br/>
+        </div>
+        <div class="col">
+            <div class="row border border-primary-subtle" >
+                <div class="row">
+                    <div class="col">
+                        <h6>{{nombre}}</h6>
+                    </div>
+                    <div class="col">
+                        <p>{{name_nuevo}}</p>
+                    </div>
+                </div>
+            
 
+                <div class="row">
+                    <div class="col">
+                        <h6>{{apellido}}</h6>
+                    </div>
+                    <div class="col">
+                        <p>{{surname_nuevo}}</p>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col">
+                        <h6>{{genero}}</h6>
+                    </div>
+                    <div class="col">
+                        <p>{{select_nuevo}}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h6>{{correo}}</h6>
+                    </div>
+                    <div class="col">
+                        <p>{{email_nuevo}}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h6>{{cedula}}</h6>
+                    </div>
+                    <div class="col">
+                        <p>{{bond_nuevo}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <router-outlet></router-outlet>
